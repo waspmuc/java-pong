@@ -96,18 +96,18 @@ public class Spielfeld extends JPanel implements KeyListener, Runnable { // Spie
             try {
 
                 // Ballgrenzen abfragen
-//                if ((ballXpos >= (580)) || (ballYpos >= 580)) {
-//                    schrittweite = -1;
-//                } else if ((ballXpos <= 1) || (ballYpos <= 1)) {
-//                    schrittweite = +1;
-//                }
+                if ((ballXpos >= (580)) || (ballYpos >= 580)) {
+                    schrittweite = -1;
+                } else if ((ballXpos <= 1) || (ballYpos <= 1)) {
+                    schrittweite = +1;
+                }
 
                 // Aktualisiere die Position des Balls um den Offset
                 ballXpos = ballXpos + schrittweite;
                 ballYpos = ballYpos + schrittweite;
                 repaint(); //Aktualsisiere das Bild
 
-                Thread.currentThread().sleep(1); // Lege den Thread für fünf Millisekunden schlafen
+                Thread.currentThread().sleep(5); // Lege den Thread für fünf Millisekunden schlafen
 
             } catch (InterruptedException e) { // Fehlerbehandlung
                 e.printStackTrace();
